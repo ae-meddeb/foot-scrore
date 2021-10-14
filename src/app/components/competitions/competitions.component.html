@@ -1,0 +1,8 @@
+<section class="competitions-list">
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let c of competitions" (click)="goToLeague(c.id)">{{ c.name }}</li>
+        </ul>
+    </div>
+    
+</section>

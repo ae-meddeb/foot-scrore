@@ -1,0 +1,22 @@
+$row-height: 35px;
+
+.matches-grid {
+    background-color: #fff;
+    padding: 15px;
+}
+
+.leagueRow {
+    background-color: #e9e9e9;
+    height: $row-height;
+    display: flex;
+    line-height: $row-height;
+    font-weight: 700;
+    border-bottom: black solid 1px;
+    span {
+        margin-left: 10px;
+    }
+    .logo {
+        align-self: center;
+        margin-left: 10px;
+    }
+}

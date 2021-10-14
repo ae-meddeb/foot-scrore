@@ -1,0 +1,9 @@
+<div class="match-row" *ngFor="let m of matches; trackBy: trackByFn">
+    <div *ngIf="m.isMatchNotStarted()" class="match-time center"> {{ m.startDate | date:'HH:mm' }}</div>
+    <div *ngIf="!m.isMatchNotStarted()" class="match-time center"> {{ m.isMatchInplay() ? m.time + "'" : m.statusLabel}} </div>
+    <div class="match-team-home"> {{ m.hTeam.name }}</div>
+    <div class="match-logo center"><img [src]="m.hTeam.logo" /></div>
+    <div class="match-score center"> {{ m.isMatchNotStarted() ? "" : m.hScore }} - {{ m.isMatchNotStarted() ? "" : m.aScore }}</div>
+    <div class="match-logo logo-away center"><img [src]="m.aTeam.logo" /></div>
+    <div class="match-team-away"> {{ m.aTeam.name }}</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="matches-grid">
+    <div class="matches-filter">
+        
+    </div>
+    <div class="competition" *ngFor="let c of grid; trackBy: trackByFn">
+        <div class="leagueRow">
+            <img *ngIf="c.league.country.code"
+                class= "logo" 
+                src="https://flagcdn.com/16x12/{{c.league.country.code}}.png"
+                width="16"
+                height="12">
+            <span>{{c.league.country.name}}: {{c.league.name}}</span>
+        </div>
+        <app-matches [matches]="c.matches"></app-matches>
+    </div>
+</div>
+

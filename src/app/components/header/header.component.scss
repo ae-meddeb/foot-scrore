@@ -1,0 +1,13 @@
+header {
+    height: 60px;
+    color: #fff;
+    background-color: #1b7700;
+    display: flex;
+    .logo {
+        font: {
+            size: 22px;
+            family: 'Pattaya', sans-serif;
+        }
+        padding: 0 15px;
+    }
+}

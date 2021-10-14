@@ -1,0 +1,41 @@
+$row-height: 50px;
+
+.match-row {
+    display: grid;
+    grid-template-areas: "time hTeam hLogo score aLogo aTeam";
+    grid-template-columns: 75px 1fr 45px 70px 45px 1fr;
+    height: $row-height;
+    line-height: $row-height - 2;
+    border-bottom: black solid 1px;
+    
+    &:last-child {
+        border: none;
+    }
+    
+    .center {
+        text-align: center;
+    }
+    .match-time {
+        grid-area: time;
+        text-transform: capitalize;
+    }
+    .match-team-home {
+        grid-area: hTeam;
+        text-align: end;
+    }
+    .match-team-away {
+        grid-area: aTeam;
+        text-align: start;
+    }
+    .match-logo {
+        grid-area: hLogo;
+        line-height: $row-height - 4;
+        img {
+            width: 20px;
+        }
+        
+        &.logo-away {
+            grid-area: aLogo;
+        }
+    }
+}
